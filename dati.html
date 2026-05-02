@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dati & Grafici — Mar d'Aral</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/dati.css" />
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Fonti: Britannica · ScienceDirect · Springer</span>
+      <h1>Dati & Grafici</h1>
+      <p class="muted" style="max-width:500px;margin:1rem auto 0">
+        Numeri reali che raccontano il collasso di un ecosistema.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="charts-grid">
+
+        <!-- GRAFICO 1: Superficie -->
+        <div class="chart-card fade-in">
+          <span class="section-label">1960 – 2018</span>
+          <h3>Superficie totale nel tempo</h3>
+          <p class="chart-desc">
+            La superficie in km² del Mar d'Aral da quando il prelievo idrico sovietico iniziò ad accelerare.
+            Il picco anomalo del 2011 riflette l'allagamento temporaneo del bacino nord dopo la diga Kokaral.
+          </p>
+          <div class="chart-wrap">
+            <canvas id="surfaceChart"></canvas>
+          </div>
+        </div>
+
+        <!-- GRAFICO 2: Salinità -->
+        <div class="chart-card fade-in">
+          <span class="section-label">Per decade · g/L</span>
+          <h3>Salinità: Nord vs Sud</h3>
+          <p class="chart-desc">
+            La diga Kokaral (2005) ha separato il destino dei due bacini. Il nord si è stabilizzato.
+            Il sud ha raggiunto livelli di salinità incompatibili con qualsiasi forma di vita acquatica.
+          </p>
+          <div class="chart-wrap">
+            <canvas id="salinityChart"></canvas>
+          </div>
+          <div class="salinity-note">
+            <span class="icon">⚠️</span>
+            <span>
+              La salinità del bacino sud negli anni 2010 (<strong style="color:var(--danger)">~170 g/L</strong>)
+              è quasi <strong>5 volte</strong> quella di un mare normale (35 g/L)
+              e oltre <strong>3 volte</strong> quella del Mar Morto (~50 g/L).
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DATA CARDS -->
+      <div class="data-cards" style="margin-top:3rem">
+        <div class="data-card fade-in">
+          <div class="data-value" style="color:var(--danger)">−60.156 km²</div>
+          <div class="data-name">Superficie persa (1960–2018)</div>
+          <div class="data-source">Fonte: ScienceDirect — "Changes in area and water volume of the Aral Sea 1960–2018"</div>
+        </div>
+        <div class="data-card fade-in delay-1">
+          <div class="data-value" style="color:var(--water-light)">~1.000 km³</div>
+          <div class="data-name">Volume d'acqua perso</div>
+          <div class="data-source">Fonte: Springer Applied Water Science</div>
+        </div>
+        <div class="data-card fade-in delay-2">
+          <div class="data-value" style="color:var(--accent)">−87,85%</div>
+          <div class="data-name">Riduzione percentuale superficie</div>
+          <div class="data-source">Fonte: ScienceDirect 2018</div>
+        </div>
+        <div class="data-card fade-in delay-3">
+          <div class="data-value" style="color:var(--sand)">87.000 km²</div>
+          <div class="data-name">Letto del lago esposto (Aralkum)</div>
+          <div class="data-source">Nuovo deserto — più grande del Portogallo</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/charts.js"></script>
+</body>
+</html>

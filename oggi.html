@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oggi & Futuro — Mar d'Aral</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    .kokaral-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .kokaral-section { grid-template-columns: 1fr; }
+    }
+
+    .good-news {
+      background: linear-gradient(135deg, var(--surface), rgba(26, 107, 154, 0.12));
+      border: 1px solid rgba(26, 107, 154, 0.25);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .good-news h3 { color: var(--water-light); margin-bottom: 0.8rem; }
+
+    .result-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .result-item:last-child { border-bottom: none; }
+
+    .result-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    .result-text { font-size: 0.88rem; color: var(--text-muted); }
+    .result-text strong { color: var(--text); }
+
+    /* Status cards */
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      .status-grid { grid-template-columns: 1fr; }
+    }
+
+    .status-card {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .status-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+    .status-name { font-size: 0.75rem; font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .status-state { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .status-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* Outlook */
+    .outlook {
+      background: linear-gradient(135deg, var(--surface), rgba(201,64,64,0.08));
+      border: 1px solid rgba(201, 64, 64, 0.2);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+
+    .outlook h3 { color: var(--danger); margin-bottom: 1rem; }
+
+    /* Comparison images */
+    .compare-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .compare-img {
+      background: var(--surface2);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .compare-img img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    .compare-label {
+      padding: 0.6rem 0.8rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Situazione 2024 · Prospettive</span>
+      <h1>Oggi & Futuro</h1>
+      <p class="muted" style="max-width:520px;margin:1rem auto 0">
+        C'è una buona notizia — e molte cattive. Ecco com'è il Mar d'Aral nel 2024.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Status 2024 -->
+      <div class="status-grid">
+        <div class="status-card fade-in">
+          <div class="status-icon">✅</div>
+          <div class="status-name">Piccolo Aral (Nord)</div>
+          <div class="status-state" style="color:var(--water-light)">Stabilizzato</div>
+          <div class="status-desc">Recupero parziale grazie alla diga Kokaral. Livello +4m, salinità ~12 g/L. Pesca parzialmente ripresa.</div>
+        </div>
+        <div class="status-card fade-in delay-1">
+          <div class="status-icon">⚠️</div>
+          <div class="status-name">Grande Aral Ovest</div>
+          <div class="status-state" style="color:var(--accent)">Critico</div>
+          <div class="status-desc">Ridotto a una striscia sottile. Salinità estrema (~170 g/L). Nessun recupero previsto senza interventi.</div>
+        </div>
+        <div class="status-card fade-in delay-2">
+          <div class="status-icon">❌</div>
+          <div class="status-name">Grande Aral Est</div>
+          <div class="status-state" style="color:var(--danger)">Scomparso</div>
+          <div class="status-desc">È il deserto Aralkum. Sabbia bianca di sale dove un tempo c'era il lago. Temperatura +5°C rispetto al 1960.</div>
+        </div>
+      </div>
+
+      <!-- Kokaral dam -->
+      <div class="kokaral-section">
+        <div class="fade-in">
+          <span class="section-label">L'unica buona notizia</span>
+          <h2>La Diga Kokaral</h2>
+          <div class="divider"></div>
+          <p style="color:var(--text-muted)">
+            Nel 2005, con il finanziamento della Banca Mondiale, il Kazakhstan ha costruito
+            la <strong style="color:var(--text)">Diga Kokaral</strong> (o Berg Strait Dam).
+            Lunga 13 km, separa fisicamente il Piccolo Aral (nord) dal Grande Aral (sud),
+            permettendo all'acqua del fiume Syr Darya di accumularsi nel bacino settentrionale
+            senza disperdersi nel sud.
+          </p>
+          <div class="good-news" style="margin-top:1.5rem">
+            <h3>Risultati del Piccolo Aral (2005–2024)</h3>
+            <div class="result-item">
+              <span class="result-icon">📈</span>
+              <span class="result-text"><strong>+4 metri</strong> di livello dell'acqua in pochi anni</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon">💧</span>
+              <span class="result-text">Salinità scesa da 30 a <strong>~12 g/L</strong> — livello compatibile con la vita acquatica</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon">🐟</span>
+              <span class="result-text">Le attività di <strong>pesca sono parzialmente riprese</strong> nel nord del Kazakhstan</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon">🌿</span>
+              <span class="result-text">Alcune specie di pesci autoctoni sono state reintrodotte con successo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-in delay-1">
+          <div class="compare-wrap">
+            <div class="compare-img">
+              <img src="images/2009.jpg" alt="Mar d'Aral 2009" loading="lazy" />
+              <div class="compare-label">2009 — Prima del recupero</div>
+            </div>
+            <div class="compare-img">
+              <img src="images/2024.png" alt="Mar d'Aral 2024" loading="lazy" />
+              <div class="compare-label">2024 — Stato attuale</div>
+            </div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.8rem">
+            Immagini satellitari Landsat 5 (2009) e Sentinel-2 (2024)
+          </p>
+        </div>
+      </div>
+
+      <!-- Prospettive -->
+      <div class="outlook fade-in">
+        <h3>⚠️ Prospettive — Il Grande Aral Sud</h3>
+        <p>
+          Senza un intervento radicale sui fiumi Amu Darya e Syr Darya — che richiederebbe
+          una riduzione massiccia dell'irrigazione agricola in Uzbekistan e Turkmenistan —
+          il <strong>Grande Aral Sud scomparirà completamente entro pochi decenni</strong>.
+        </p>
+        <p>
+          Le cinque nazioni che si dividono i bacini idrografici dell'Asia Centrale
+          (Kazakistan, Uzbekistan, Turkmenistan, Kirghizistan, Tagikistan) non hanno mai
+          raggiunto un accordo efficace sulla gestione condivisa dell'acqua.
+          Il cambiamento climatico aggrava ulteriormente la situazione, riducendo i ghiacciai
+          che alimentano i fiumi montani.
+        </p>
+        <p style="margin-bottom:0">
+          La <strong>storia del Mar d'Aral</strong> è oggi studiata come caso emblematico
+          di come le decisioni politiche e agricole possano causare disastri ambientali
+          irreversibili su scala regionale.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>

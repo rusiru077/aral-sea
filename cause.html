@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cause — Mar d'Aral</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    /* ===== VERTICAL TIMELINE ===== */
+    .timeline-vert {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+
+    .timeline-vert::before {
+      content: '';
+      position: absolute;
+      left: 80px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--water), var(--accent), var(--danger));
+    }
+
+    .tl-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .tl-year {
+      flex-shrink: 0;
+      width: 72px;
+      text-align: right;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      padding-top: 0.15rem;
+      letter-spacing: 0.04em;
+    }
+
+    .tl-dot {
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+      margin-top: 0.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tl-dot.danger { background: var(--danger); }
+    .tl-dot.water { background: var(--water-light); }
+
+    .tl-body {
+      flex: 1;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+    }
+
+    .tl-body h4 {
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .tl-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 600px) {
+      .timeline-vert::before { left: 56px; }
+      .tl-year { width: 48px; font-size: 0.72rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">1918 – 2003</span>
+      <h1>Le Cause</h1>
+      <p class="muted" style="max-width:540px;margin:1rem auto 0">
+        Un disastro non accade dall'oggi al domani. Decenni di scelte politiche e ingegneristiche
+        hanno prosciugato il Mar d'Aral.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="info-box fade-in" style="max-width:720px;margin:0 auto 3rem">
+        <p style="margin:0">
+          <strong style="color:var(--accent2)">La radice del problema:</strong>
+          L'URSS aveva bisogno di cotone — l'"oro bianco". I fiumi Amu Darya e Syr Darya,
+          che alimentavano il Mar d'Aral, vennero deviati per irrigare le pianure desertiche
+          dell'Asia Centrale. Il lago non aveva più acqua sufficiente per sopravvivere.
+        </p>
+      </div>
+
+      <div class="timeline-vert">
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1918</div>
+          <div class="tl-dot water"></div>
+          <div class="tl-body">
+            <h4>La decisione iniziale</h4>
+            <p>Il governo russo decide di deviare i fiumi dell'Asia Centrale per trasformare
+            il deserto in terra coltivabile. Il piano prevede grandi canali di irrigazione.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1930s</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Costruzione massiccia dei canali</h4>
+            <p>Vengono costruiti centinaia di km di canali irrigui, molti mal progettati.
+            Le perdite per infiltrazione ed evaporazione raggiungono il <strong>30–70%</strong> dell'acqua prelevata.
+            Il Canale Qaraqum, il più lungo dell'Asia Centrale, è emblematico di questo spreco.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1960</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Il piano del cotone si intensifica</h4>
+            <p>L'URSS lancia il programma intensivo di coltivazione del cotone ("oro bianco").
+            L'Amu Darya e il Syr Darya vengono deviati massicciamente per irrigare campi in Uzbekistan,
+            Kazakistan e Turkmenistan. Il Mar d'Aral inizia a calare: −20 cm/anno.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1970s</div>
+          <div class="tl-dot danger"></div>
+          <div class="tl-body">
+            <h4>Il tasso di calo raddoppia</h4>
+            <p>Il ritmo di prosciugamento raddoppia: il livello scende di <strong>50–60 cm all'anno</strong>.
+            I primi allarmi scientifici vengono ignorati. L'economia del cotone prevale su tutto.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1980s</div>
+          <div class="tl-dot danger"></div>
+          <div class="tl-body">
+            <h4>Crollo accelerato — 80/90 cm/anno</h4>
+            <p>Il calo raggiunge <strong>80–90 cm all'anno</strong>. L'Uzbekistan diventa il maggiore
+            esportatore mondiale di cotone — ma a quale prezzo. Il lago perde metà della sua profondità originale.
+            La salinità comincia a distruggere l'ecosistema acquatico.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1987</div>
+          <div class="tl-dot danger"></div>
+          <div class="tl-body">
+            <h4>Split: il lago si divide in due</h4>
+            <p>Il Mar d'Aral si separa fisicamente in un bacino <strong>nord</strong> (Piccolo Aral)
+            e un bacino <strong>sud</strong> (Grande Aral). Da questo momento i destini dei due specchi
+            d'acqua divergeranno sempre di più.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">1991</div>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <h4>Crollo dell'URSS — ma l'irrigazione continua</h4>
+            <p>Con la dissoluzione dell'Unione Sovietica ci si aspettava un cambio di rotta.
+            Non avviene: le neonate repubbliche dell'Asia Centrale continuano a dipendere dall'agricoltura
+            irrigua e dagli stessi canali per la propria economia.</p>
+          </div>
+        </div>
+
+        <div class="tl-item fade-in">
+          <div class="tl-year">2003</div>
+          <div class="tl-dot danger"></div>
+          <div class="tl-body">
+            <h4>Il Sud si frammenta ulteriormente</h4>
+            <p>Il Grande Aral sud si divide a sua volta in un bacino <strong>ovest</strong>
+            e un bacino <strong>est</strong>. Quest'ultimo è il più esposto e inizia a prosciugarsi
+            completamente, diventando il cuore del futuro deserto Aralkum.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-box fade-in" style="max-width:720px;margin:3rem auto 0">
+        <p style="margin:0;font-size:0.9rem">
+          <strong style="color:var(--accent2)">Il Canale Qaraqum:</strong>
+          Lungo ~1.375 km, è il più grande canale di irrigazione dell'Asia Centrale.
+          Costruito tra il 1954 e il 1988, trasportava l'acqua dell'Amu Darya nel deserto del Turkmenistan.
+          Le perdite per infiltrazione ed evaporazione si stimano tra il <strong>30 e il 70%</strong>
+          dell'acqua totale immessa — un'inefficienza colossale che ha contribuito enormemente al prosciugamento del lago.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>

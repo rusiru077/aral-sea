@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fonti & Crediti — Mar d'Aral</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    .sources-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .sources-grid { grid-template-columns: 1fr; }
+    }
+
+    .source-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.5rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .source-card:hover {
+      border-color: rgba(200,146,42,0.3);
+    }
+
+    .source-type {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .source-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .source-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Image credits */
+    .image-credits {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .credit-row {
+      display: flex;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.85rem;
+      align-items: baseline;
+    }
+
+    .credit-row:last-child { border-bottom: none; }
+
+    .credit-year {
+      font-family: 'DM Mono', monospace;
+      color: var(--accent);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .credit-info { color: var(--text-muted); }
+    .credit-info strong { color: var(--text); }
+
+    /* Team */
+    .team-grid {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .team-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.8rem;
+      text-align: center;
+      flex: 1;
+      min-width: 160px;
+    }
+
+    .team-card .name { font-weight: 600; margin-bottom: 0.2rem; }
+    .team-card .role { font-size: 0.78rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Ricerca · Immagini · Dati</span>
+      <h1>Fonti & Crediti</h1>
+      <p class="muted" style="max-width:500px;margin:1rem auto 0">
+        Tutte le fonti utilizzate per la ricerca e le immagini satellitari.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:860px">
+
+      <!-- Fonti testo -->
+      <span class="section-label">Fonti testuali e dati</span>
+      <h2 style="margin-bottom:0.3rem">Bibliografie</h2>
+      <div class="divider"></div>
+
+      <div class="sources-grid">
+
+        <div class="source-card fade-in">
+          <span class="source-type">Enciclopedia</span>
+          <div class="source-title">Britannica Encyclopedia — "Aral Sea"</div>
+          <p class="source-desc">Articolo principale sul Mar d'Aral con dati storici di superficie (1960–2009).</p>
+        </div>
+
+        <div class="source-card fade-in delay-1">
+          <span class="source-type">Rivista scientifica</span>
+          <div class="source-title">ScienceDirect — "Changes in area and water volume of the Aral Sea 1960–2018"</div>
+          <p class="source-desc">Dati quantitativi precisi su superficie e volume, utilizzati per i grafici. Calcolo del −87,85%.</p>
+        </div>
+
+        <div class="source-card fade-in delay-2">
+          <span class="source-type">Rivista scientifica</span>
+          <div class="source-title">Springer Applied Water Science — "Changes in water volume of the Aral Sea after 1960"</div>
+          <p class="source-desc">Dati sul volume d'acqua perso (~1.000 km³) e analisi dei flussi idrici.</p>
+        </div>
+
+        <div class="source-card fade-in delay-3">
+          <span class="source-type">Organizzazione internazionale</span>
+          <div class="source-title">UNESCO — "Aral Sea and the Aral Region"</div>
+          <p class="source-desc">Rapporto su impatto ambientale e umano. unesdoc.unesco.org</p>
+        </div>
+
+        <div class="source-card fade-in">
+          <span class="source-type">Agenzia spaziale</span>
+          <div class="source-title">ESA — "Earth from Space: The shrinking Aral Sea" (2025)</div>
+          <p class="source-desc">Analisi ESA con immagini Sentinel-2 aggiornate al 2025.</p>
+        </div>
+
+        <div class="source-card fade-in delay-1">
+          <span class="source-type">Istituto governativo</span>
+          <div class="source-title">USGS — "Landsat imagery of the Aral Sea 1992–2020"</div>
+          <p class="source-desc">Archivio immagini Landsat e documentazione tecnica.</p>
+        </div>
+
+        <div class="source-card fade-in delay-2">
+          <span class="source-type">Database satellitare</span>
+          <div class="source-title">Copernicus Data Space Ecosystem</div>
+          <p class="source-desc">browser.dataspace.copernicus.eu — fonte delle immagini Sentinel-2 L2A.</p>
+        </div>
+
+        <div class="source-card fade-in delay-3">
+          <span class="source-type">Enciclopedia aperta</span>
+          <div class="source-title">Wikipedia — "Aral Sea"</div>
+          <p class="source-desc">Sintesi e riferimenti per salinità, diga Kokaral e impatto sociale.</p>
+        </div>
+
+      </div>
+
+      <!-- Immagini satellitari -->
+      <div class="image-credits fade-in">
+        <h3 style="margin-bottom:1.2rem">Immagini Satellitari</h3>
+
+        <div class="credit-row">
+          <span class="credit-year">1985</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">1987</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">1989</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">1995</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2000</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2007</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2009</span>
+          <span class="credit-info"><strong>Landsat 5 TM</strong> — USGS EarthExplorer. Dominio pubblico.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2016</span>
+          <span class="credit-info"><strong>Sentinel-2 L2A</strong> — ESA Copernicus Data Space, 20 agosto 2016. Licenza <strong>CC BY 4.0</strong>. Copernicus Sentinel data processed by ESA.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2018</span>
+          <span class="credit-info"><strong>Sentinel-2 L2A</strong> — ESA Copernicus Data Space, 30 agosto 2018. Licenza <strong>CC BY 4.0</strong>.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2020</span>
+          <span class="credit-info"><strong>Sentinel-2 L2A</strong> — ESA Copernicus Data Space, 19 agosto 2020. Licenza <strong>CC BY 4.0</strong>.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2022</span>
+          <span class="credit-info"><strong>Sentinel-2 L2A</strong> — ESA Copernicus Data Space, 24 agosto 2022. Licenza <strong>CC BY 4.0</strong>.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">2024</span>
+          <span class="credit-info"><strong>Sentinel-2 L2A</strong> — ESA Copernicus Data Space, 23 agosto 2024. Licenza <strong>CC BY 4.0</strong>.</span>
+        </div>
+        <div class="credit-row">
+          <span class="credit-year">BG</span>
+          <span class="credit-info"><strong>overall.webp</strong> — Immagine panoramica Mar d'Aral.</span>
+        </div>
+
+        <div class="info-box" style="margin-top:1.5rem;margin-bottom:0">
+          <p style="font-size:0.82rem;margin:0;color:var(--text-muted)">
+            Le immagini Sentinel-2 L2A sono state scaricate dal
+            <a href="https://browser.dataspace.copernicus.eu" target="_blank" rel="noopener">Copernicus Data Space Ecosystem</a>
+            e rinominate per uso didattico. La licenza CC BY 4.0 richiede l'attribuzione:
+            <em>"Copernicus Sentinel data [anno] processed by ESA"</em>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div style="margin-top:3.5rem" class="fade-in">
+        <span class="section-label">Progetto scolastico</span>
+        <h2 style="margin-bottom:0.3rem">Il Gruppo</h2>
+        <div class="divider"></div>
+        <p style="color:var(--text-muted);margin-bottom:1.5rem">
+          Istituto Marconi, Verona — Educazione Civica / GPI — Maggio 2026
+        </p>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="name">Fernando Rusiru</div>
+            <div class="role">Muthunamagonnage Fernando Sonal Rusiru</div>
+          </div>
+          <div class="team-card">
+            <div class="name">Diego Prati</div>
+            <div class="role">Ricerca e contenuti</div>
+          </div>
+          <div class="team-card">
+            <div class="name">Andrea Albertini</div>
+            <div class="role">Ricerca e contenuti</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>

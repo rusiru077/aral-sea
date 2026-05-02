@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impatto Umano — Mar d'Aral</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      .impact-grid { grid-template-columns: 1fr; }
+    }
+
+    .impact-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .impact-card:hover {
+      border-color: rgba(200, 146, 42, 0.3);
+    }
+
+    .impact-card::before {
+      content: attr(data-icon);
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2.5rem;
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .impact-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      color: var(--accent2);
+    }
+
+    .impact-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .impact-card .impact-stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.4rem;
+      line-height: 1;
+    }
+
+    /* Moynaq section */
+    .moynaq-section {
+      background: linear-gradient(135deg, var(--surface), rgba(201,64,64,0.08));
+      border: 1px solid rgba(201, 64, 64, 0.15);
+      border-radius: 8px;
+      padding: 3rem 2.5rem;
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .moynaq-section { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .moynaq-quote {
+      border-left: 3px solid var(--danger);
+      padding-left: 1.5rem;
+    }
+
+    .moynaq-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .moynaq-quote cite {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* Cemetery of ships */
+    .ships-visual {
+      text-align: center;
+    }
+
+    .ship-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .ships-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Comunità · Salute · Ambiente</span>
+      <h1>Impatto Umano</h1>
+      <p class="muted" style="max-width:520px;margin:1rem auto 0">
+        Dietro i dati ci sono persone. Il prosciugamento del Mar d'Aral ha distrutto
+        un'intera civiltà lacustre.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="impact-grid">
+
+        <div class="impact-card fade-in" data-icon="🎣">
+          <span class="impact-stat">40.000</span>
+          <h3>Pesca distrutta</h3>
+          <p>Prima degli anni '60, 40.000 pescatori lavoravano sul Mar d'Aral.
+          La regione produceva <strong>un sesto</strong> dell'intera produzione ittica sovietica —
+          principalmente carpe, lucci e aringhe del Caspio. Entro il 1980 l'industria era
+          completamente distrutta: il pesce era scomparso, le acque erano troppo saline.</p>
+        </div>
+
+        <div class="impact-card fade-in delay-1" data-icon="🌪️">
+          <span class="impact-stat" style="color:var(--sand)">60.000 km²</span>
+          <h3>Tempeste di sale</h3>
+          <p>Il letto del lago esposto — chiamato <strong>Deserto Aralkum</strong> — è coperto
+          di sale e pesticidi accumulati in decenni di agricoltura intensiva.
+          I venti scavano tempeste di sabbia salata che trasportano tonnellate di sostanze
+          tossiche per centinaia di chilometri, fino all'Artico e all'Himalaya secondo alcuni studi.</p>
+        </div>
+
+        <div class="impact-card fade-in delay-2" data-icon="🏥">
+          <span class="impact-stat" style="color:var(--danger)">↑↑↑</span>
+          <h3>Crisi sanitaria</h3>
+          <p>La popolazione locale ha subito un drastico aumento di malattie respiratorie,
+          cancro, tubercolosi, anemia e disturbi renali — causati dall'esposizione a sale e
+          pesticidi presenti nell'aria e nell'acqua. L'aspettativa di vita nella regione
+          è crollata negli anni '80 e '90. La mortalità infantile è tra le più alte del pianeta.</p>
+        </div>
+
+        <div class="impact-card fade-in delay-3" data-icon="🌡️">
+          <span class="impact-stat" style="color:var(--water)">−microclima</span>
+          <h3>Cambiamento climatico locale</h3>
+          <p>Il lago regolava il microclima della regione: moderava le temperature, favoriva
+          le precipitazioni. Con la sua scomparsa, gli <strong>inverni sono diventati più freddi</strong>
+          e le <strong>estati più calde</strong>. Le precipitazioni si sono ridotte drasticamente,
+          aggravando ulteriormente l'aridità della zona.</p>
+        </div>
+
+        <div class="impact-card fade-in" data-icon="🚶" style="grid-column: span 2">
+          <h3>Migrazioni e abbandono</h3>
+          <p>Le città costiere sono state abbandonate progressivamente.
+          <strong>Moynaq</strong>, un tempo porto fiorente con una grande flotta da pesca, si trova oggi
+          a <strong>150 km dall'acqua</strong>. Il famoso "Cimitero delle navi" — relitti arrugginiti
+          fermi nel deserto dove un tempo c'era il porto — è diventato il simbolo più iconico
+          di questo disastro ambientale. Decine di migliaia di persone hanno lasciato la regione
+          in cerca di lavoro e condizioni di vita accettabili.</p>
+        </div>
+
+      </div>
+
+      <!-- Moynaq section -->
+      <div class="moynaq-section fade-in">
+        <div class="moynaq-quote">
+          <blockquote>"Una volta pescavamo qui. Ora peschiamo la sabbia."</blockquote>
+          <cite>— Pescatore di Moynaq, ex porto lacustre in Uzbekistan</cite>
+          <div class="divider" style="margin-top:1.5rem"></div>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin:0">
+            Moynaq era una delle città più prospere dell'Uzbekistan sovietico.
+            Aveva un porto attivo, fabbriche per la lavorazione del pesce, industrie collegate.
+            Oggi è una città fantasma che sopravvive principalmente grazie ai turisti
+            che vengono a fotografare i relitti nel deserto.
+          </p>
+        </div>
+        <div class="ships-visual">
+          <div class="ship-row">🚢 🛥️ ⛵</div>
+          <div class="ship-row">🚢 🛥️ 🚢</div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin:0.5rem 0">
+            <strong style="color:var(--accent2)">Il Cimitero delle Navi</strong>
+          </p>
+          <p class="ships-caption">
+            Decine di imbarcazioni arrugginite giacciono nel deserto dove un tempo
+            c'era il porto di Moynaq. Sono diventate il simbolo più fotografato
+            del disastro del Mar d'Aral.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>
