@@ -1,4 +1,4 @@
-/* nav.js — carica navbar e footer, gestisce hamburger e active link */
+/* nav.js: carica navbar e footer, gestisce hamburger e active link */
 
 async function loadComponent(id, url) {
   const el = document.getElementById(id);
@@ -30,9 +30,9 @@ async function loadComponent(id, url) {
     } else if (id === 'footer-placeholder') {
       el.innerHTML = `<footer class="site-footer">
         <div class="footer-inner">
-          <div class="footer-brand">Mar d'Aral — Il Mare Che Scompare</div>
+          <div class="footer-brand">Mar d'Aral: Il Mare Che Scompare</div>
           <div class="footer-info">
-            <span>Istituto Marconi, Verona — Educazione Civica / GPI</span>
+            <span>Istituto Marconi, Verona · Educazione Civica / GPI</span>
             <span>Fernando Rusiru · Diego Prati · Andrea Albertini</span>
           </div>
         </div>

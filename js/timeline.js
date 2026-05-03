@@ -1,4 +1,4 @@
-/* timeline.js — Swiper satellite gallery */
+/* timeline.js: Swiper satellite gallery */
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {

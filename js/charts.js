@@ -1,4 +1,4 @@
-/* charts.js — Chart.js grafici Mar d'Aral */
+/* charts.js: Chart.js grafici Mar d'Aral */
 
 document.addEventListener('DOMContentLoaded', () => {
   Chart.defaults.color = '#8a9ab0';
