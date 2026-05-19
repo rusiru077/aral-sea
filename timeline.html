@@ -6,7 +6,6 @@
   <title>Galleria Satellitare | Mar d'Aral</title>
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/timeline.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -25,6 +24,7 @@
 
   <section class="section--tight">
     <div class="container">
+
       <!-- Progress indicator -->
       <div class="timeline-progress fade-in">
         <span class="progress-label">Acqua rimasta</span>
@@ -45,195 +45,37 @@
           <span>Sentinel-2 L2A (2016–2024), ESA Copernicus, CC BY 4.0</span>
         </div>
       </div>
+
+      <!-- Fullscreen viewer -->
+      <div class="fs-viewer" id="fs-viewer">
+        <!-- Slides injected by JS -->
+        <button class="fs-nav fs-prev" id="fs-prev" aria-label="Precedente">&#8592;</button>
+        <button class="fs-nav fs-next" id="fs-next" aria-label="Successivo">&#8594;</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="fs-dots" id="fs-dots"></div>
+
+      <!-- Counter + keyboard hint -->
+      <div class="fs-counter" id="fs-counter">1 / 12</div>
+      <p class="keyboard-hint">Usa <kbd>←</kbd> <kbd>→</kbd> per navigare · swipe su mobile</p>
+
+      <!-- Source note -->
+      <div class="source-note fade-in">
+        <p>
+          <strong style="color:var(--accent2)">Fonte immagini:</strong>
+          Landsat 5 TM, USGS EarthExplorer (dominio pubblico).
+          Sentinel-2 L2A, ESA Copernicus Data Space Ecosystem, licenza CC BY 4.0.
+          Immagini elaborate e nominate per uso didattico.
+        </p>
+      </div>
+
     </div>
   </section>
-
-  <!-- SWIPER -->
-  <div class="container" style="padding-bottom:3rem">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-
-        <!-- 1985 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/1985.jpg" alt="Mar d'Aral 1985" loading="lazy" />
-            <div class="slide-year-badge">1985</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">Lago ancora parzialmente integro. La superficie totale supera i 60.000 km².</p>
-          </div>
-        </div>
-
-        <!-- 1987 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/1987.jpg" alt="Mar d'Aral 1987" loading="lazy" />
-            <div class="slide-year-badge">1987</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">Inizia la divisione tra il bacino nord e quello sud. Il calo si accelera.</p>
-          </div>
-        </div>
-
-        <!-- 1989 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/1989.jpg" alt="Mar d'Aral 1989" loading="lazy" />
-            <div class="slide-year-badge">1989</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">Split tra Nord e Sud completato. La superficie è già al 59% del valore del 1960.</p>
-          </div>
-        </div>
-
-        <!-- 1995 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/1995.jpg" alt="Mar d'Aral 1995" loading="lazy" />
-            <div class="slide-year-badge">1995</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">Il bacino sud diventa sempre più salato. Le ultime specie ittiche scompaiono.</p>
-          </div>
-        </div>
-
-        <!-- 2000 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2000.jpg" alt="Mar d'Aral 2000" loading="lazy" />
-            <div class="slide-year-badge">2000</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">La parte orientale comincia a prosciugarsi rapidamente. 17.382 km² totali.</p>
-          </div>
-        </div>
-
-        <!-- 2007 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2007.jpg" alt="Mar d'Aral 2007" loading="lazy" />
-            <div class="slide-year-badge">2007</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">Minimo storico: il lago è ridotto al 10% della superficie originale del 1960.</p>
-          </div>
-        </div>
-
-        <!-- 2009 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2009.jpg" alt="Mar d'Aral 2009" loading="lazy" />
-            <div class="slide-year-badge">2009</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Landsat 5</span>
-            <p class="slide-note">Il bacino orientale è praticamente scomparso. Solo 8.409 km² rimangono.</p>
-          </div>
-        </div>
-
-        <!-- TRANSITION SLIDE -->
-        <div class="swiper-slide">
-          <div class="slide-transition">
-            <div class="icon">🛰️</div>
-            <h3>Cambio Satellite</h3>
-            <p>
-              Landsat 5 ha cessato le operazioni nel 2013.<br>
-              Le immagini successive provengono da <strong>Sentinel-2 L2A</strong> (ESA Copernicus, lancio 2015).
-              La risoluzione migliora da 30m a 10m per pixel.
-            </p>
-          </div>
-        </div>
-
-        <!-- 2016 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2016.png" alt="Mar d'Aral 2016" loading="lazy" />
-            <div class="slide-year-badge">2016</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Sentinel-2 L2A</span>
-            <p class="slide-note">Post-diga Kokaral: il Piccolo Aral (nord) si è parzialmente ripreso. Il sud continua a ridursi.</p>
-          </div>
-        </div>
-
-        <!-- 2018 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2018.png" alt="Mar d'Aral 2018" loading="lazy" />
-            <div class="slide-year-badge">2018</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Sentinel-2 L2A</span>
-            <p class="slide-note">Il bacino sud continua a restringersi. La superficie totale è ~8.322 km² (−87,85% dal 1960).</p>
-          </div>
-        </div>
-
-        <!-- 2020 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2020.png" alt="Mar d'Aral 2020" loading="lazy" />
-            <div class="slide-year-badge">2020</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Sentinel-2 L2A</span>
-            <p class="slide-note">Il deserto Aralkum è ora chiaramente visibile: sabbia salata dove un tempo c'era acqua.</p>
-          </div>
-        </div>
-
-        <!-- 2022 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2022.png" alt="Mar d'Aral 2022" loading="lazy" />
-            <div class="slide-year-badge">2022</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Sentinel-2 L2A</span>
-            <p class="slide-note">Situazione stabile al nord, critica al sud. Il bacino est è praticamente scomparso.</p>
-          </div>
-        </div>
-
-        <!-- 2024 -->
-        <div class="swiper-slide">
-          <div class="slide-image-wrap">
-            <img src="images/2024.png" alt="Mar d'Aral 2024" loading="lazy" />
-            <div class="slide-year-badge" style="color:var(--accent)">2024</div>
-          </div>
-          <div class="slide-info">
-            <span class="slide-satellite">Sentinel-2 L2A</span>
-            <p class="slide-note">Stato attuale. Il Grande Aral sud è ridotto a una striscia. Solo l'Aral nord sopravvive.</p>
-          </div>
-        </div>
-
-      </div><!-- /swiper-wrapper -->
-
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-
-  <!-- Caption note -->
-  <div class="container">
-    <div class="info-box fade-in" style="margin-bottom:3rem">
-      <p style="font-size:0.85rem;margin:0;color:var(--text-muted)">
-        <strong style="color:var(--accent2)">Fonte immagini:</strong>
-        Landsat 5 TM, USGS EarthExplorer (dominio pubblico).
-        Sentinel-2 L2A, ESA Copernicus Data Space Ecosystem, licenza CC BY 4.0.
-        Immagini elaborate e nominate per uso didattico.
-      </p>
-    </div>
-  </div>
 </main>
 
 <div id="footer-placeholder"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/timeline.js"></script>
 </body>
