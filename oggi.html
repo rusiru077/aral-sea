@@ -115,6 +115,10 @@
       transition: transform 0.5s ease, filter 0.3s ease;
     }
 
+    .compare-img[data-satellite="sentinel"] .compare-img-wrap img {
+      object-fit: cover;
+    }
+
     .compare-img:hover .compare-img-wrap img {
       transform: scale(1.03);
       filter: brightness(1.05);
@@ -212,13 +216,13 @@
 
         <div class="fade-in delay-1">
           <div class="compare-wrap">
-            <div class="compare-img">
+            <div class="compare-img" data-satellite="landsat">
               <div class="compare-img-wrap">
                 <img src="images/2009.jpg" alt="Mar d'Aral 2009" loading="lazy" />
               </div>
               <div class="compare-label">2009 &mdash; Prima del recupero</div>
             </div>
-            <div class="compare-img">
+            <div class="compare-img" data-satellite="sentinel">
               <div class="compare-img-wrap">
                 <img src="images/2024.png" alt="Mar d'Aral 2024" loading="lazy" />
               </div>

@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const el = document.createElement('div');
     el.className = 'fs-slide' + (i === 0 ? ' active' : '');
     el.dataset.index = i;
+    if (s.satellite === 'Sentinel-2 L2A') {
+      el.dataset.satellite = 'sentinel';
+    }
 
     if (s.type === 'transition') {
       el.innerHTML = `

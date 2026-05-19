@@ -186,6 +186,10 @@
   transition: transform 0.5s ease, filter 0.3s ease;
 }
 
+.map-item[data-satellite="sentinel"] .map-item-img-wrap img {
+  object-fit: cover;
+}
+
 .map-item:hover .map-item-img-wrap img {
   transform: scale(1.03);
   filter: brightness(1.05);
