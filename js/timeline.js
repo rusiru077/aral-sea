@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     { type: 'img', year: '2007', src: 'images/2007.jpg', satellite: 'Landsat 5', note: 'Minimo storico: il lago è ridotto al 10% della superficie originale del 1960.', surface: 6800 },
     { type: 'img', year: '2009', src: 'images/2009.jpg', satellite: 'Landsat 5', note: 'Il bacino orientale è praticamente scomparso. Solo 8.409 km² rimangono.', surface: 8409 },
     { type: 'transition', surface: null },
-    { type: 'img', year: '2016', src: 'images/2016.png', satellite: 'Sentinel-2 L2A', note: 'Post-diga Kokaral: il Piccolo Aral (nord) si è parzialmente ripreso. Il sud continua a ridursi.', surface: 9800 },
-    { type: 'img', year: '2018', src: 'images/2018.png', satellite: 'Sentinel-2 L2A', note: 'Il bacino sud continua a restringersi. La superficie totale è ~8.322 km² (−87,85% dal 1960).', surface: 8322 },
-    { type: 'img', year: '2020', src: 'images/2020.png', satellite: 'Sentinel-2 L2A', note: 'Il deserto Aralkum è ora chiaramente visibile: sabbia salata dove un tempo c\'era acqua.', surface: 8100 },
-    { type: 'img', year: '2022', src: 'images/2022.png', satellite: 'Sentinel-2 L2A', note: 'Situazione stabile al nord, critica al sud. Il bacino est è praticamente scomparso.', surface: 8050 },
-    { type: 'img', year: '2024', src: 'images/2024.png', satellite: 'Sentinel-2 L2A', note: 'Stato attuale. Il Grande Aral sud è ridotto a una striscia. Solo l\'Aral nord sopravvive.', surface: 8300 },
+    { type: 'img', year: '2016', src: 'images/2016.jpg', satellite: 'Sentinel-2 L2A', note: 'Post-diga Kokaral: il Piccolo Aral (nord) si è parzialmente ripreso. Il sud continua a ridursi.', surface: 9800 },
+    { type: 'img', year: '2018', src: 'images/2018.jpg', satellite: 'Sentinel-2 L2A', note: 'Il bacino sud continua a restringersi. La superficie totale è ~8.322 km² (−87,85% dal 1960).', surface: 8322 },
+    { type: 'img', year: '2020', src: 'images/2020.jpg', satellite: 'Sentinel-2 L2A', note: 'Il deserto Aralkum è ora chiaramente visibile: sabbia salata dove un tempo c\'era acqua.', surface: 8100 },
+    { type: 'img', year: '2022', src: 'images/2022.jpg', satellite: 'Sentinel-2 L2A', note: 'Situazione stabile al nord, critica al sud. Il bacino est è praticamente scomparso.', surface: 8050 },
+    { type: 'img', year: '2024', src: 'images/2024.jpg', satellite: 'Sentinel-2 L2A', note: 'Stato attuale. Il Grande Aral sud è ridotto a una striscia. Solo l\'Aral nord sopravvive.', surface: 8300 },
   ];
 
   const BASE = 67499; // superficie 1960 come riferimento 100%
