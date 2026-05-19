@@ -111,16 +111,19 @@
   pointer-events: auto;
 }
 
-/* IMAGE: contain so nothing gets cropped — black bg is fine, looks space-like */
+/* IMAGE: contain for Landsat, cover for Sentinel */
 .fs-slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
   display: block;
-  /* subtle zoom-in on active */
   transition: transform 6s ease;
   transform: scale(1.02);
+}
+
+.fs-slide[data-satellite="sentinel"] img {
+  object-fit: cover;
 }
 
 .fs-slide.active img {
